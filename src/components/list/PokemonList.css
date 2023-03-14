@@ -1,0 +1,12 @@
+.pokemon_list {
+  display: grid;
+  padding: 24px 12px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+}
+@media (min-width: 768px) {
+  .pokemon_list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -5,11 +5,11 @@ import PokemonList from "./components/list/PokemonList";
 
 function App() {
   return (
-    <div>
+    <>
       <Logo />
       <NavBar />
       <PokemonList />
-    </div>
+    </>
   );
 }
 
