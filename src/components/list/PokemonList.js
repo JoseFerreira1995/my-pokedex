@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import PokemonCard from "../card/PokemonCard";
+import "./PokemonList.css";
 
 export default function PokemonList(props) {
   const [pokemonData, setPokemonData] = useState([]);
@@ -30,11 +31,13 @@ export default function PokemonList(props) {
   }, []);
 
   return (
-    <div>
+    <div className="pokemon_list">
       {pokemonData.map((pokemon, index) => (
-        <div>
-          <PokemonCard key={index} pokemon={pokemon} sprite={pokemonSprites[index]} />
-        </div>
+        <PokemonCard
+          key={index}
+          pokemon={pokemon}
+          sprite={pokemonSprites[index]}
+        />
       ))}
     </div>
   );
