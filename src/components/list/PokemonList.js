@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import PokemonCard from "../card/PokemonCard";
 
 export default function PokemonList(props) {
   const [pokemonData, setPokemonData] = useState(null);
@@ -15,14 +16,12 @@ export default function PokemonList(props) {
         console.log(error);
       });
   }, []);
-
+  
   return (
     <div>
       {pokemonData &&
         pokemonData.results.map((pokemon, index) => (
-          <div key={index}>
-            <h2>{pokemon.name}</h2>
-          </div>
+          <PokemonCard key={index} pokemon={pokemon} />
         ))}
     </div>
   );
