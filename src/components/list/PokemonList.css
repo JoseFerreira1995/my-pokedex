@@ -1,12 +1,16 @@
 .pokemon_list {
   display: grid;
+  margin-left: 25%;
+  margin-top: 5%;
   padding: 24px 12px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  grid-template-columns: repeat(2, 10rem);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 @media (min-width: 768px) {
   .pokemon_list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 10rem);
+  
+
   }
 }
