@@ -1,14 +1,21 @@
 import NavBar from "./components/navBar/NavBar";
 import Logo from "./components/logo/Logo";
 import "./App.css";
-import PokemonList from "./components/list/PokemonList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import List from "./pages/List";
+import Layout from "./pages/Layout";
 
 function App() {
   return (
     <>
-      <Logo />
-      <NavBar />
-      <PokemonList />
+      <BrowserRouter>
+        <Logo />
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="list" element={<List />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
